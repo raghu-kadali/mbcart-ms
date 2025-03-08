@@ -4,6 +4,7 @@ pipeline {
         stage ('Build') {
             step {
                 echo "*********Building the application*********"
+                sh 'mvn package'
             }
         }
         stage ('sonar') {
